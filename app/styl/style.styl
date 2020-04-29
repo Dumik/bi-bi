@@ -117,6 +117,7 @@ header
 	background: #ffffff
 
 .countainer-header
+	position relative
 	margin-top: 90px
 
 .header-tittle 
@@ -192,9 +193,44 @@ nav
 .navbar-toggler:focus 
 	border: 1px solid #000
 	outline: none
-	
+
+.header-button-countainer
+	width 100%
+	z-index: 10
+	margin: -100px 0 0 0
+	position absolute
+	display flex
+	flex-wrap: nowrap
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	align-items: center
 
 
+.header-button 
+	background: #A3121B
+	color: #fff
+	border-radius: 2px
+	border 2px solid #A3121B
+	float: right
+	padding 15px 50px
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px
+	font-weight: 400
+	transition: 0.5s
+
+.header-button:hover
+	background: #900000
+	border 2px solid #A3121B
+	float: right
+	transition: 0.5s
+
+.header-button-countainer p
+	font-family: 'Montserrat', sans-serif;
+	font-size: 28px
+	font-weight: 400
+	transition: 0.5s
+	margin: 10px 0
 /*----------about--------*/
 
 .about-us
