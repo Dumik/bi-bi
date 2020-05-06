@@ -116,17 +116,23 @@ header
 	min-height: 100px
 	background: #ffffff
 
+
 .countainer-header
 	position relative
 	margin-top: 90px
+	display flex
+	flex-wrap: nowrap
+	flex-direction: column
+	align-items: start 
+	justify-content: center
 
 .header-tittle 
 	padding: 0
 	margin: 0
 	display flex
 	flex-wrap: nowrap
-	flex-direction: row
-	align-items: center
+	flex-direction: column
+	align-items: start 
 	justify-content: center
 
 .header-tittle h1
@@ -149,7 +155,7 @@ nav
 
 
 .fixed-top
-	z-index: 30
+	z-index: 100
 	
 .navbar
 	background #ffffff
@@ -197,8 +203,6 @@ nav
 .header-button-countainer
 	width 100%
 	z-index: 10
-	margin: -100px 0 0 0
-	position absolute
 	display flex
 	flex-wrap: nowrap
 	flex-direction: column
@@ -207,17 +211,19 @@ nav
 	align-items: center
 
 
+
 .header-button 
 	background: #A3121B
 	color: #fff
 	border-radius: 2px
 	border 2px solid #A3121B
 	float: right
-	padding 15px 80px
+	padding 20px 80px
 	font-family: 'Montserrat', sans-serif;
-	font-size: 18px
-	font-weight: 400
+	font-size: 22px
+	font-weight: 700
 	transition: 0.5s
+	
 
 .header-button:hover
 	background: #900000
@@ -227,10 +233,11 @@ nav
 
 .header-button-countainer p
 	font-family: 'Montserrat', sans-serif;
-	font-size: 28px
+	font-size: 24px
 	font-weight: 400
 	transition: 0.5s
 	margin: 10px 0
+	border-bottom: 3px solid #A3121B
 /*----------about--------*/
 
 .about-us
@@ -314,18 +321,22 @@ nav
 
 
 .product-img
-	width 100%
-	height 300px
+	width: 20em;
+	height: 20em;
 	border 1px solid #aaaaaa
 	overflow hidden
 	padding: 0
 	transition: 0.3s
-	text-align: center
+	display flex
+	flex-wrap: nowrap
+	flex-direction:  row
+	align-items: center
+	justify-content: center
 
 
 .product-img img 
-	width auto
-	height 100%
+	width 100%
+	height auto
 	text-align: center
 
 .product-name
@@ -900,6 +911,11 @@ footer
 	padding 0 0 0 100px
   }
 
+  .container-contect {
+	display: grid
+	grid-template-columns:  1fr 1fr
+	grid-template-rows: 2}
+
 }
 
 
@@ -920,6 +936,7 @@ footer
   }
   .product-main {
 	  padding: 100px 0 10px 0}
+
 }
 
 @media only screen and (max-width: 1400px) {
@@ -957,9 +974,21 @@ footer
 
 @media only screen and (max-width: 1250px) {
   .product-img {
-	width 100%
-	height 180px
+	width 13em
+	height 10em
   }
+
+  .product-name h3 {
+	  font-size: 22px
+	  }
+	  
+	.header-button-countainer{
+		width 100%
+		margin:  0
+		}
+
+
+	
 }
 
 @media only screen and (max-width: 1200px) {
@@ -974,12 +1003,10 @@ footer
 	padding 0 0 0 40px
   }
 
-  .aboutphoto{
-	  display none}
 
 	 .product-img {
 		width 100%
-		height 210px
+		height 9em
   }
 
   .product{
@@ -1012,11 +1039,13 @@ footer
 
 
 @media only screen and (max-width: 1100px) {
-  .product-img {
-	height 180px
-  }
+
   .product{
 	height 320px}
+
+	.product-name h3 {
+		font-size: 20px;
+		}
 
 	.my-modal-title h4{
 	font-size: 32px
@@ -1047,6 +1076,18 @@ footer
 	padding 0 0 0 40px
   }
 
+.header-button {
+		background: #A3121B
+		color: #fff
+		border-radius: 2px
+		border 2px solid #A3121B
+		padding 12px 50px
+		font-size: 18px
+		font-weight: 700
+		transition: 0.5s
+		}
+
+ 
   .abouttext h2 {
     margin: 50px 50px 50px 50px;
 	}
@@ -1178,6 +1219,11 @@ footer
 
 }
 
+@media only screen and (max-width: 767px) {
+	 .aboutphoto{
+	  display none}
+}
+
 @media only screen and (max-width: 690px) {
 
   .header-tittle h1{
@@ -1185,6 +1231,11 @@ footer
 	font-weight: 900
 	padding 0 0 0 10px
   }
+
+  .product-name h3 {
+		font-size: 19px;
+		}
+
   .footer-menu li {
     padding: 0 5px;
 }
@@ -1215,6 +1266,33 @@ footer
 		line-height: 42px;
 	}
 
+	.header-img {
+		order: 3
+		}
+		
+	
+
+	.header-button-countainer{
+		width 100%
+		order 0
+	}
+
+		.header-button-countainer p {
+			font-size: 18px}
+
+
+	.header-button {
+		background: #A3121B
+		color: #fff
+		border-radius: 2px
+		border 2px solid #A3121B
+		padding 15px 60px
+		font-size: 18px
+		font-weight: 700
+		transition: 0.5s
+		
+	}
+
 	.abouttext {
 	    padding: 0;
 	}
@@ -1229,7 +1307,7 @@ footer
 		height 200px
   	}
 
-	  .countainer-modal-text {
+	.countainer-modal-text {
     	padding: 0;
 	}
 
@@ -1262,13 +1340,13 @@ footer
 		min-height: 600px;
 	}
 
-.ordering-wrapper h2 {
-    font-size: 28px;
-    line-height: 38px;
-    margin-top: 50px;
-}
-.ordering-content{
-	padding: 0}
+	.ordering-wrapper h2 {
+	    font-size: 28px;
+	    line-height: 38px;
+	    margin-top: 50px;
+	}
+	.ordering-content{
+		padding: 0}
 	.ordering-content-countainer {
 		padding: 0 5px 0 5px
 		margin-bottom: 20px}
@@ -1309,6 +1387,10 @@ footer
    	 	font-size: 24px;
    	 	line-height: 38px;
 	}
+	 .container-contect {
+	display: grid
+	grid-template-columns:  1fr 
+	grid-template-rows: 4}
 }
 
 @media only screen and (max-width: 400px) {
@@ -1320,7 +1402,7 @@ footer
 		height 140px
   	}
 	.product-name h3 {
-    	font-size: 20px;
+    	font-size: 18px;
     	line-height: 30px;
 
 	}
@@ -1340,7 +1422,7 @@ footer
 		height 120px
   	}
 	.product-name h3 {
-    	font-size: 16px;
+    	font-size: 14px;
 	}
 	.ordering-countainer {
 		min-height: 650px;
